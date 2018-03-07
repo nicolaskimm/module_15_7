@@ -2,10 +2,10 @@ class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            running: false,   
             minutes: 0,
             seconds: 0,
-            miliseconds: 0
+            miliseconds: 0,
+            running: false,
         }
     }
 
@@ -71,14 +71,16 @@ class App extends React.Component {
     }
 
     render() {
-        return {
+        return (
             <div>
-                <button onClick={this.start}>Start</button>
-                <button onClick={this.stop}>Stop</button>
-                <button onClick={this.reset}>Reset Watch</button>
+                <nav className="controls">
+                    <button onClick={this.start()}>Start</button>
+                    <button onClick={this.stop()}>Stop</button>
+                    <button onClick={this.reset()}>Reset Watch</button>
+                </nav>
+                <p>{this.format()}</p>
             </div>
-            <p>{this.format()}</p>
-        }
+        );
     }
 }
 
