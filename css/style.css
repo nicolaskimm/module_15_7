@@ -3,10 +3,14 @@ body {
   margin: 0;
   padding: 0; }
 
-nav {
-  display: flex;
-  justify-content: center; }
-  nav button {
+.stopwatch {
+  font-size: 100px;
+  color: #9b8d1f; }
+  .stopwatch div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .stopwatch button {
     width: 140px;
     height: 50px;
     font-size: 20px;
@@ -15,13 +19,7 @@ nav {
     background-color: #2f3033;
     color: #dbb325;
     border-radius: 20px; }
-    nav button:hover {
+    .stopwatch button:hover {
       opacity: 0.5; }
-
-.stopwatch {
-  display: flex;
-  justify-content: center;
-  font-size: 100px;
-  color: #9b8d1f; }
 
 /*# sourceMappingURL=style.css.map */

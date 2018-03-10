@@ -21,8 +21,6 @@ class App extends React.Component {
 
     resetWatch() {
         this.reset();
-
-        startButton.style.display = 'block';
     }
 
     format() {
@@ -34,8 +32,6 @@ class App extends React.Component {
             this.running = true;
             this.watch = setInterval(() => this.step(), 10);
         }
-
-        startButton.style.display = 'none';
     }
 
     step() {
@@ -74,9 +70,9 @@ class App extends React.Component {
         return (
             <div>
                 <nav className="controls">
-                    <button onClick={this.start()}>Start</button>
-                    <button onClick={this.stop()}>Stop</button>
-                    <button onClick={this.reset()}>Reset Watch</button>
+                    <button onClick={this.start.bind(this)}>Start</button>
+                    <button onClick={this.stop.bind(this)}>Stop</button>
+                    <button onClick={this.reset.bind(this)}>Reset Watch</button>
                 </nav>
                 <p>{this.format()}</p>
             </div>
@@ -92,4 +88,4 @@ function pad0(value){
     return result;
 }
 
-ReactDOM.render(<App />, document.getElementById(".stopwatch"));
+ReactDOM.render(<App />, document.querySelector(".stopwatch"));

@@ -4,9 +4,15 @@ body {
     padding: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
+.stopwatch {
+    font-size: 100px;
+    color: #9b8d1f;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     button {
         width: 140px;
@@ -21,11 +27,4 @@ nav {
             opacity: 0.5;
         }
     }
-}
-
-.stopwatch {
-    display: flex;
-    justify-content: center;
-    font-size: 100px;
-    color: #9b8d1f;
 }
